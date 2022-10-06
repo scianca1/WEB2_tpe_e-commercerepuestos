@@ -1,0 +1,49 @@
+<?php
+/* Smarty version 4.2.1, created on 2022-10-06 02:34:02
+  from 'C:\xampp\htdocs\web2\repuestos\templates\productos.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_633e227aecb428_68564543',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fd99de483b6e02a0f301b3b98f47a6a4b67c65de' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\productos.tpl',
+      1 => 1665016439,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:templates/header.tpl' => 1,
+    'file:templates/footer.tpl' => 1,
+  ),
+),false)) {
+function content_633e227aecb428_68564543 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');
+$_smarty_tpl->tpl_vars['producto']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->value) {
+$_smarty_tpl->tpl_vars['producto']->do_else = false;
+?>
+ <div class= "card " margin= "3px" >
+  <img src="imagenes/cremallera_prueba.jpg"class="card-img-top" alt="cremayera">
+  <div class="card-body">
+     <h2 class="card-title"><?php echo $_smarty_tpl->tpl_vars['producto']->value->producto;?>
+</h2>
+     <p class="card-text">$<?php echo $_smarty_tpl->tpl_vars['producto']->value->precio;?>
+</p>
+     <a href= "verunproducto/<?php echo $_smarty_tpl->tpl_vars['producto']->value->ID;?>
+"  class="btn btn-primary">ver Producto</a>
+  </div>
+ </div>
+ 
+ <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+ <?php $_smarty_tpl->_subTemplateRender('file:templates/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
