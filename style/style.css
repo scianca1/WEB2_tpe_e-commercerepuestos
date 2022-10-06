@@ -1,42 +1,68 @@
-body{
-    border: 0px;
+ html body{
+   background-color: #c7e524d1;
+     border: 0px;
     padding: 0px;
-    margin: 0px;
     display: grid;
     grid-template-areas: "header header header "
+                        "categoria categoria categoria"
                         "productos productos productos";
     grid-template-rows:auto ;
     grid-template-columns: repeat(3, 1fr);
-
+   
+}
+.card{
+   
+    margin: 20px;
+    
 }
 img {
-    max-width: 1%;
-    max-height: 1%;
+    margin-top: 0%;
+    border-radius: 50%;
+   height: 12%;
+
+    width: 12%;
+    margin-bottom: 4%;
+    
    }
 header{
+    border-bottom: 5px  solid rgba(0, 0, 0, 0.589);
     grid-area:header;
     padding-top: 3%; 
-    background-color: rgb(0, 0, 197);
+    background-color: rgba(0, 0, 197, 0.801);
 }
 .productos{
-    margin: 3px;
+    margin: 5px;
     grid-area:productos;
     
 }
 .btm{
     background-color:rgb(0, 0, 197) ;
+
+}
+ div .btn-comprar{
+    margin-left: 40%;
+    background-color:green ;
+
 }
 .producto{
-    border: solid blue 3px ;
-    display:  grid;
+    background-color: white;
+    border: solid black 3px ;
+    border-radius: 10%;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    /* display:  grid;
     grid-template-areas: "titulo titulo"
                         "material precio";
     grid-template-rows:20% 10% ;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 70% 30%; */
 
 }
 .h1{
     grid-area:titulo;
+}
+h2{
+    text-align: center;
 }
 .material{
     grid-area:material;
@@ -44,3 +70,20 @@ header{
 .precio{
     grid-area:precio;
 }
+.card-img-top{
+    object-fit: cover;
+ 
+    margin-left: 20%;
+    max-width: 30%;
+    max-height: 30%;
+}
+.categoria {
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 31%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-area: categoria;
+    border-bottom: 3px dashed rgb(0, 0, 197);
+
+}
+

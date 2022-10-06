@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-06 04:16:31
+/* Smarty version 4.2.1, created on 2022-10-06 05:17:16
   from 'C:\xampp\htdocs\web2\repuestos\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633e3a7fa1d5e3_68473144',
+  'unifunc' => 'content_633e48bc04e272_34644263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0bf8ed6608085e82c2dad86a104ff474411dbb8c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\header.tpl',
-      1 => 1665022585,
+      1 => 1665026131,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633e3a7fa1d5e3_68473144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633e48bc04e272_34644263 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +36,10 @@ function content_633e3a7fa1d5e3_68473144 (Smarty_Internal_Template $_smarty_tpl)
 <body>
     <header>
         <nav class="container d-flex flex-column flex-md-row justify-content-between">
-            <h1>LOGO</h1>
-          
+        <img src="<?php echo BASE_URL;?>
+/imagenes/logo.png" class="logo" alt="logo">
+        
+                      
           <!-- <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
           <a class="py-2 d-none d-md-inline-block" href="#">Product</a> -->
          

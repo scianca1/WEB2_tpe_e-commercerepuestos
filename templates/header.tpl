@@ -12,7 +12,9 @@
 <body>
     <header>
         <nav class="container d-flex flex-column flex-md-row justify-content-between">
-            <h1>LOGO</h1>
+        <img src="{BASE_URL}/imagenes/logo.png" class="logo" alt="logo">
+        
+            {* <h1>LOGO</h1> *}
           
           <!-- <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
           <a class="py-2 d-none d-md-inline-block" href="#">Product</a> -->
