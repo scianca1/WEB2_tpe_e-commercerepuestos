@@ -17,5 +17,11 @@
         $repuesto= $sentencia->fetch(PDO::FETCH_OBJ);
         return $repuesto;
     }
+    function getcategoria($categoria){
+         $sentencia= $this->db->prepare("select * from productos WHERE categoria=?");
+         $sentencia->execute([$categoria]);
+         $repuestosdecat=$sentencia->fetchAll(PDO::FETCH_OBJ);
+         return $repuestosdecat;
+    }
 
 }

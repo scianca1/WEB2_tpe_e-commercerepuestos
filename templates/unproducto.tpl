@@ -1,6 +1,7 @@
 {include file='templates/header.tpl'}
 <div class= "productos producto ">
     <div>
+        <div class="content-img-produc"><img src="{BASE_URL}imagenes/cremallera_prueba.jpg"class="card-img-top" alt="cremayera"></div>
         <h2>{$producto->producto}</h2>
          {* <img src="imagenes/cremallera_prueba.jpg"class="card-img-top" alt="cremayera"> *}
         <div class= "material"><label>MATERIAL:</label><h3>{$producto->material}</h3></div>

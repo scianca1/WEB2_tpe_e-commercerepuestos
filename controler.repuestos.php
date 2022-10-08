@@ -18,6 +18,10 @@ require_once 'repuestos.vista.php';
         $producto= $this ->modelproducts->getproduct($id);
         $this->viewproducts->showproducto($producto);
     }
+    function showcategoria($categoria){
+        $cate= $this->modelproducts->getcategoria($categoria);
+        $this->viewproducts->showcategoria($cate,$categoria);
+    }
 
    
 }

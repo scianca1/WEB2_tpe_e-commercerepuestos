@@ -16,4 +16,9 @@ require_once './libs/smarty-4.2.1/smarty-4.2.1/libs/Smarty.class.php';
       $this->smarty->assign('producto',$producto);
       $this->smarty->display('templates/unproducto.tpl');
      }
+     function showcategoria($productos,$categoria){
+       $this->smarty->assign('productos',$productos);
+       $this->smarty->assign('categoria',$categoria);
+       $this->smarty->display('templates/categoria.tpl');
+     }
 }
