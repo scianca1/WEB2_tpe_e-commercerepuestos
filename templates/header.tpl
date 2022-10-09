@@ -14,7 +14,7 @@
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
     <a  class="alogo" href="{BASE_URL}home"><img src="{BASE_URL}/imagenes/logo.png" class="logo" alt="logo"></a>
-    <a class="iniciarsesion">Iniciar sesion</a>
+    <a class="iniciarsesion" href="{BASE_URL}/formlogin">Iniciar sesion</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,7 +29,7 @@
             <a class="nav-link active" aria-current="page" href="{BASE_URL}home">Home</a>
           </li>
            
-            <a class="iniciarsesionmenu">Iniciar sesion</a>
+            <a class="iniciarsesionmenu" href="{BASE_URL}/formlogin">Iniciar sesion</a>
            
           
       <div>

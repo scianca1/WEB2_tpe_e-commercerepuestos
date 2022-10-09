@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-09 01:56:28
+/* Smarty version 4.2.1, created on 2022-10-09 21:51:46
   from 'C:\xampp\htdocs\web2\repuestos\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63420e2c4b7220_30749455',
+  'unifunc' => 'content_63432652a7d4d1_34512761',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0bf8ed6608085e82c2dad86a104ff474411dbb8c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\header.tpl',
-      1 => 1665273385,
+      1 => 1665344636,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63420e2c4b7220_30749455 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63432652a7d4d1_34512761 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +40,8 @@ function content_63420e2c4b7220_30749455 (Smarty_Internal_Template $_smarty_tpl)
     <a  class="alogo" href="<?php echo BASE_URL;?>
 home"><img src="<?php echo BASE_URL;?>
 /imagenes/logo.png" class="logo" alt="logo"></a>
-    <a class="iniciarsesion">Iniciar sesion</a>
+    <a class="iniciarsesion" href="<?php echo BASE_URL;?>
+/formlogin">Iniciar sesion</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,7 +57,8 @@ home"><img src="<?php echo BASE_URL;?>
 home">Home</a>
           </li>
            
-            <a class="iniciarsesionmenu">Iniciar sesion</a>
+            <a class="iniciarsesionmenu" href="<?php echo BASE_URL;?>
+/formlogin">Iniciar sesion</a>
            
           
       <div>

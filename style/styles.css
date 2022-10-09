@@ -142,3 +142,13 @@ html body{
  .insertado{
      background-color: green;
  }
+ .btn-guardar{
+     margin: 5%;
+ }
+ .btn-warning{
+     margin-left: 5%;
+     margin-top: 5%;
+ }
+ .btn-outline-danger{
+     margin-top: 5%;
+ }

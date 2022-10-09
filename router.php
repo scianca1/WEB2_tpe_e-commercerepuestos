@@ -33,6 +33,10 @@ switch ($params[0]){
     case'categoria':
         $repuestoscontrolador->showcategoria($params[1]);
     break;
+    case'formlogin':
+        $repuestoscontrolador->showcategoria($params[1]);
+    break;
+
    default:
       
       echo "error en el switch ";
