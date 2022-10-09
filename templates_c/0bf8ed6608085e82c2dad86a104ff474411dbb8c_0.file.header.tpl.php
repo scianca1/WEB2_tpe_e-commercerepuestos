@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 20:40:12
+/* Smarty version 4.2.1, created on 2022-10-09 01:56:28
   from 'C:\xampp\htdocs\web2\repuestos\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6340728c1b1c22_15286196',
+  'unifunc' => 'content_63420e2c4b7220_30749455',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0bf8ed6608085e82c2dad86a104ff474411dbb8c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\header.tpl',
-      1 => 1665167885,
+      1 => 1665273385,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6340728c1b1c22_15286196 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63420e2c4b7220_30749455 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +75,8 @@ categoria/Bujes">Bujes</a></li>
               <li><a class="dropdown-item" href="<?php echo BASE_URL;?>
 categoria/Extremos">Extremos</a></li>
       </div>
+      <a  href="<?php echo BASE_URL;?>
+iracargarnuevopr"class="iniciarsesionmenu">Cargar un nuevo producto</a>
     </div>
   </div>
 </nav>

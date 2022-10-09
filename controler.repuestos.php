@@ -22,6 +22,26 @@ require_once 'repuestos.vista.php';
         $cate= $this->modelproducts->getcategoria($categoria);
         $this->viewproducts->showcategoria($cate,$categoria);
     }
+    function borrarproducto($id){
+        $producto= $this ->modelproducts->getproduct($id);
+        $this->modelproducts->deleteproducto($id);
+        $this->viewproducts->seborro($producto);
+        
+    }
+    function iracargarpr(){
+        $this->viewproducts->formcargar();
+    }
+    function cargarpr(){
+        $producto= $_GET['titulo'];
+        $material= $_GET['material'];
+        $precio= $_GET['precio'];
+        $categoria= $_GET['categoria'];
+        $this->modelproducts->insertproduct($producto,$material,$precio,$categoria);
+        $this->viewproducts->insertado($producto);
+    }
+    function editarproducto($id) {
+        
+    }
 
    
 }

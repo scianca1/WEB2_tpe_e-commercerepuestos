@@ -79,7 +79,7 @@ html body{
      max-height: 50%;  */
  }
  
- .categoria {
+ .categoria,.categorias{
      margin-top: 5%;
      margin-left: 30%;
      margin-right: 38%;
@@ -95,10 +95,8 @@ html body{
      color: white;
     
  }
- select{
-    background-color: transparent;
-    color: white;
-    border: 0px transparent; 
+ .seleccategoria{
+     border: #0d6efd solid 1px;
  }
  .alogo{
      margin-left: 48%;
@@ -120,4 +118,27 @@ html body{
  }
  .navbar-toggler{
      margin-right: 3%;
+ }
+ h1.btn-outline-danger{
+     margin: 5%;
+ }
+ .formnew{
+     justify-items: center;
+     display: grid;
+     grid-template-areas: "dato"
+                        "input";
+     grid-template-rows:auto ;
+     grid-template-columns: auto;
+    
+
+ } 
+ .titulo,.form-select,.categorias, .precio,.material{
+     grid-area: input;
+ }
+ .dato{
+     grid-area: dato;
+     
+ }
+ .insertado{
+     background-color: green;
  }

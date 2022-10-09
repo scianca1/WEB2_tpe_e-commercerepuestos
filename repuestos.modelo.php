@@ -23,5 +23,13 @@
          $repuestosdecat=$sentencia->fetchAll(PDO::FETCH_OBJ);
          return $repuestosdecat;
     }
+    function deleteproducto($id){
+        $sentencia= $this->db->prepare("DELETE FROM productos WHERE ID=?");
+        $sentencia->execute([$id]);
+         }
+    function insertproduct($producto,$material,$precio,$categoria){
+        $sentencia= $this->db->prepare("INSERT INTO productos(producto,material,precio,categoria) VALUES(?,?,?,?)");
+        $sentencia->execute([$producto,$material,$precio,$categoria]);
+    }
 
 }

@@ -43,6 +43,7 @@
               <li><a class="dropdown-item" href="{BASE_URL}categoria/Bujes">Bujes</a></li>
               <li><a class="dropdown-item" href="{BASE_URL}categoria/Extremos">Extremos</a></li>
       </div>
+      <a  href="{BASE_URL}iracargarnuevopr"class="iniciarsesionmenu">Cargar un nuevo producto</a>
     </div>
   </div>
 </nav>

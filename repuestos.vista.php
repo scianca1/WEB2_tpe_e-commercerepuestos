@@ -21,4 +21,15 @@ require_once './libs/smarty-4.2.1/smarty-4.2.1/libs/Smarty.class.php';
        $this->smarty->assign('categoria',$categoria);
        $this->smarty->display('templates/categoria.tpl');
      }
+     function formcargar(){
+       $this->smarty->display('templates/formcargar.tpl');
+     } 
+     function insertado($producto){
+       $this->smarty->assign('titulo',$producto);
+       $this->smarty->display('templates/insertado.tpl');
+     }
+     function seborro($producto){
+      $this->smarty->assign('producto',$producto);
+      $this->smarty->display('templates/borrado.tpl');
+     }
 }

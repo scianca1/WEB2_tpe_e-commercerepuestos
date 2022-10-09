@@ -13,14 +13,26 @@ $params= explode("/", $action);
 $repuestoscontrolador= new controladorproductos();
 switch ($params[0]){
    case 'home':
-    $repuestoscontrolador->showhome();
+        $repuestoscontrolador->showhome();
     break;
    case'verunproducto':
-    $repuestoscontrolador->showproducto($params[1]);
+        $repuestoscontrolador->showproducto($params[1]);
+    break;
+    case'borrar':
+        $repuestoscontrolador->borrarproducto($params[1]);
+    break;
+    case'editar':
+        $repuestoscontrolador->editarproducto($params[1]);
+    break;
+    case'iracargarnuevopr':
+        $repuestoscontrolador->iracargarpr();
+    break;
+    case'cargarproducto':
+        $repuestoscontrolador->cargarpr();
     break;
     case'categoria':
         $repuestoscontrolador->showcategoria($params[1]);
-        break;
+    break;
    default:
       
       echo "error en el switch ";
