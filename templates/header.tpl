@@ -13,8 +13,15 @@
 <header>
 <nav class="navbar navbar-dark bg-dark fixed-top">
   <div class="container-fluid">
+    {if isset($smarty.session.nombre)}
+          <p class='hola'>hola {$smarty.session.nombre}</p>
+      {/if}
     <a  class="alogo" href="{BASE_URL}home"><img src="{BASE_URL}/imagenes/logo.png" class="logo" alt="logo"></a>
-    <a class="iniciarsesion" href="{BASE_URL}/formlogin">Iniciar sesion</a>
+    {if !isset($smarty.session.nombre)}
+            <a class="iniciarsesionmenu color" href="{BASE_URL}formlogin">Iniciar sesion</a>
+           {else}
+           <a  href="{BASE_URL}logaut"class="iniciarsesionmenu color">Cerrar sesion</a>
+           {/if}
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,22 +35,32 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{BASE_URL}home">Home</a>
           </li>
-           
-            <a class="iniciarsesionmenu" href="{BASE_URL}/formlogin">Iniciar sesion</a>
-           
+           {if !isset($smarty.session.nombre)}
+            <a class="iniciarsesionmenu" href="{BASE_URL}formlogin">Iniciar sesion</a>
+           {else}
+           <a  href="{BASE_URL}logaut"class="iniciarsesionmenu">Cerrar sesion</a>
+           {/if}
           
+
       <div>
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorias
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="{BASE_URL}categoria/Cremalleras">Cremalleras</a></li>
-              <li><a class="dropdown-item" href="{BASE_URL}categoria/Bombas">Bombas</a></li>
-              <li><a class="dropdown-item" href="{BASE_URL}categoria/Retenes">Retenes</a></li>
-              <li><a class="dropdown-item" href="{BASE_URL}categoria/Bujes">Bujes</a></li>
-              <li><a class="dropdown-item" href="{BASE_URL}categoria/Extremos">Extremos</a></li>
-      </div>
-      <a  href="{BASE_URL}iracargarnuevopr"class="iniciarsesionmenu">Cargar un nuevo producto</a>
+            
+             {foreach from=$categorias item= $categoria}
+              
+               
+               <li><a class="dropdown-item" href="{BASE_URL}categoria/{$categoria->id}">{$categoria->categoria}</a></li>
+               
+               
+             {/foreach}
+       </div>       
+      
+      {if isset($smarty.session.nombre)}
+     <li><a href="{BASE_URL}iracargarnuevopr"class="iniciarsesionmenu">Cargar un nuevo producto</a></li>
+      <li><a href="{BASE_URL}admincat"class="iniciarsesionmenu">Administrar categorias</a></li>
+      {/if}
     </div>
   </div>
 </nav>

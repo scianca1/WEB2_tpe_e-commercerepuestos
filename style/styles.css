@@ -5,7 +5,8 @@ html body{
      display: grid;
      grid-template-areas: "header header header "
                          "categoria categoria categoria"
-                         "productos productos productos";
+                         "productos productos productos"
+                         "form form form ";
      grid-template-rows:auto ;
      grid-template-columns: repeat(3, 1fr);
     
@@ -99,7 +100,7 @@ html body{
      border: #0d6efd solid 1px;
  }
  .alogo{
-     margin-left: 48%;
+     margin-left: 25%;
  }
  .iniciarsesion{
      color: rgba(255, 255, 255, 0.562);
@@ -152,3 +153,39 @@ html body{
  .btn-outline-danger{
      margin-top: 5%;
  }
+ .formuser{
+     border-radius: 0%;
+ }
+ .form-control,.mb-3{
+     margin: 5%;
+ }
+ .error{
+     color: red;
+     margin: 5%;
+     padding-left: 3%;
+     border-top: solid rgba(128, 128, 128, 0.486) 1px;
+     }
+.hola{
+    color: grey;
+    margin-left: 10%;
+}
+.color{
+    color: grey;
+}
+.tableadmincat{
+    margin: 3%;
+}
+.hidden{
+    display: none;
+}
+.tdadmincat{
+    text-align: center;
+}
+.formaddcat{
+    grid-area: form;
+    background-color: #42e9f5;
+    margin-left: 10%;
+    margin-right:10%;
+    border-radius: 50%;
+    padding-top: 5%;
+}

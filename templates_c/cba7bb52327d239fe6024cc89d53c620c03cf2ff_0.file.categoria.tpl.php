@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 19:25:52
+/* Smarty version 4.2.1, created on 2022-10-14 23:01:39
   from 'C:\xampp\htdocs\web2\repuestos\templates\categoria.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63406120f22c96_62918783',
+  'unifunc' => 'content_6349ce33cda200_35590265',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cba7bb52327d239fe6024cc89d53c620c03cf2ff' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\categoria.tpl',
-      1 => 1665163550,
+      1 => 1665781297,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_63406120f22c96_62918783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6349ce33cda200_35590265 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<h1 class= "categoria"><?php echo $_smarty_tpl->tpl_vars['categoria']->value;?>
+<h1 class= "categoria"><?php echo $_smarty_tpl->tpl_vars['categoria']->value->categoria;?>
 </h1>
 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['productos']->value, 'producto');

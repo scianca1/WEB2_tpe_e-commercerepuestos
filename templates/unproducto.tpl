@@ -1,8 +1,10 @@
 {include file='templates/header.tpl'}
 <div class= "productos producto ">
-    <div>
-        <a href="{BASE_URL}editar/{$producto->ID}"type="button" class="btn btn-warning">Editar este producto</a>
+    <div> 
+       {if isset($smarty.session.nombre)}
+        <a href="{BASE_URL}iraeditar/{$producto->ID}"type="button" class="btn btn-warning">Editar este producto</a>
         <a href="{BASE_URL}borrar/{$producto->ID}"type="button" class="btn btn-outline-danger">Borrar este producto</a>
+        {/if}
         <div class="content-img-produc"><img src="{BASE_URL}imagenes/cremallera_prueba.jpg"class="card-img-top" alt="cremayera"></div>
         <h2>{$producto->producto}</h2>
          {* <img src="imagenes/cremallera_prueba.jpg"class="card-img-top" alt="cremayera"> *}

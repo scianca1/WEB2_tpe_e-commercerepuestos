@@ -17,9 +17,9 @@
         $repuesto= $sentencia->fetch(PDO::FETCH_OBJ);
         return $repuesto;
     }
-    function getcategoria($categoria){
-         $sentencia= $this->db->prepare("select * from productos WHERE categoria=?");
-         $sentencia->execute([$categoria]);
+    function getcategoria($id){
+         $sentencia= $this->db->prepare("select * from productos WHERE id_categoria_fk=?");
+         $sentencia->execute([$id]);
          $repuestosdecat=$sentencia->fetchAll(PDO::FETCH_OBJ);
          return $repuestosdecat;
     }
@@ -28,8 +28,14 @@
         $sentencia->execute([$id]);
          }
     function insertproduct($producto,$material,$precio,$categoria){
-        $sentencia= $this->db->prepare("INSERT INTO productos(producto,material,precio,categoria) VALUES(?,?,?,?)");
+        $sentencia= $this->db->prepare("INSERT INTO productos(producto,material,precio,id_categoria_fk) VALUES(?,?,?,?)");
         $sentencia->execute([$producto,$material,$precio,$categoria]);
     }
-
+    function editproducto($titulo,$material,$precio,$id_categoria,$id){
+        $sentencia= $this->db->prepare("UPDATE productos SET material=?,precio=?,producto=?,id_categoria_fk=? WHERE ID=?");
+        $sentencia->execute([$material,$precio,$titulo,$id_categoria,$id]);
+    }
+    
+    
+    
 }
