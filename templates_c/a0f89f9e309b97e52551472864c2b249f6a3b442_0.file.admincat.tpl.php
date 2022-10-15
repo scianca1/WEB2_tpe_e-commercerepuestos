@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 22:51:20
+/* Smarty version 4.2.1, created on 2022-10-15 23:14:36
   from 'C:\xampp\htdocs\web2\repuestos\templates\admincat.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349cbc86c6f51_90341694',
+  'unifunc' => 'content_634b22bc38e973_43860123',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0f89f9e309b97e52551472864c2b249f6a3b442' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\admincat.tpl',
-      1 => 1665780134,
+      1 => 1665868473,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6349cbc86c6f51_90341694 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634b22bc38e973_43860123 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <h1 class= "categoria">Administrar Categorias</h1>
@@ -59,8 +59,8 @@ goeditarcat/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id;?>
 /<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 "type="button" class="btn btn-warning">Editar </a></td>
       <td class="tdadmincat"><a href="<?php echo BASE_URL;?>
-borrarcat/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id;?>
-"type="button" class="btn btn-outline-danger">Borrar </a></td>
+goborrarcat/<?php echo $_smarty_tpl->tpl_vars['categoria']->value->id;?>
+"type="button" class="btn btn-outline-danger">Eliminar </a></td>
      </tr>
     <p class="hidden"><?php echo $_smarty_tpl->tpl_vars['i']->value++;?>
 </p>

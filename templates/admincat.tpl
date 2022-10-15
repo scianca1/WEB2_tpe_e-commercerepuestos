@@ -22,7 +22,7 @@
       <th scope="row">{$i}</th>
       <td class="tdadmincat">{$categoria->categoria}</td>
       <td class="tdadmincat"><a href="{BASE_URL}goeditarcat/{$categoria->id}/{$i}"type="button" class="btn btn-warning">Editar </a></td>
-      <td class="tdadmincat"><a href="{BASE_URL}borrarcat/{$categoria->id}"type="button" class="btn btn-outline-danger">Borrar </a></td>
+      <td class="tdadmincat"><a href="{BASE_URL}goborrarcat/{$categoria->id}"type="button" class="btn btn-outline-danger">Eliminar </a></td>
      </tr>
     <p class="hidden">{$i++}</p>
     {{/foreach}}

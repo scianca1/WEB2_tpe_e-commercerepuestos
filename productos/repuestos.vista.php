@@ -50,5 +50,11 @@ require_once './libs/smarty-4.2.1/smarty-4.2.1/libs/Smarty.class.php';
       $this->smarty->assign('categoria',$categoria);
       $this->smarty->display('templates/formeditcat.tpl');
      }
+    function showgoborrar($categoria,$productosdecate){
+      $this->smarty->assign('categoria',$categoria);
+      $this->smarty->assign('numerodeproductos',count($productosdecate));
+      $this->smarty->display('templates/goborrarproducto.tpl');
+
+    }
    
 }

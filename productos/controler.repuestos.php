@@ -89,6 +89,14 @@ require_once 'productos/categorias.modelo.php';
         $this->modelcategorias->insertcat($nombre);
         header("location: ".BASE_URL."admincat");
     }
+    function goborrarcategoria($id_cate){
+        $this->helper->checklogged();
+        $productosdecate= $this->modelproducts->getcategoria($id_cate);
+        $categoria= $this->modelcategorias-> getcategoria($id_cate);
+        $this->viewproducts->showgoborrar($categoria,$productosdecate);
+        
+    }
+
     function borrarcategoria($id){
         $this->helper->checklogged();
         $this->modelcategorias->deletecat($id);

@@ -18,7 +18,7 @@ switch ($params[0]){
    case 'home':
         $repuestoscontrolador->showhome();
     break;
-   case'verunproducto':
+    case'verunproducto':
         $repuestoscontrolador->showproducto($params[1]);
     break;
     case'borrar':
@@ -45,6 +45,9 @@ switch ($params[0]){
     case'addcategoria':
         $repuestoscontrolador->addcat();
     break;
+    case'goborrarcat':
+        $repuestoscontrolador->goborrarcategoria($params[1]);
+    break;
     case'borrarcat':
         $repuestoscontrolador->borrarcategoria($params[1]);
     break;
@@ -54,8 +57,6 @@ switch ($params[0]){
     case'editarcat':
         $repuestoscontrolador->editarcat($params[1]);
     break;
-
-
     case'formlogin':
         $usuarioscontrolador->showform();
     break;
