@@ -25,20 +25,17 @@ class controladorproductos
     }
     function showhome()
     {
-        session_start();
         $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showproducts($this->productos);
     }
     function showproducto($id)
     {
-        session_start();
         $producto = $this->modelproducts->getproduct($id);
         $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showproducto($producto);
     }
     function showcategoria($id)
     {
-        session_start();
         $this->viewproducts->showheader($this->categorias);
         $cate = $this->modelproducts->getcategoria($id);
         $categoria = $this->modelcategorias->getcategoria($id);
@@ -53,7 +50,6 @@ class controladorproductos
     }
     function iracargarpr()
     {
-        session_start();
         $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showformcargar();
     }
@@ -61,10 +57,12 @@ class controladorproductos
     {
         $this->viewproducts->showheader($this->categorias);
         $this->helper->checklogged();
-        $producto = $_GET['titulo'];
-        $material = $_GET['material'];
-        $precio = $_GET['precio'];
-        $categoria = $_GET['categoria'];
+        if (!empty($_GET['titulo'] && $_GET['material'] &&  $_GET['precio'] && $_GET['categoria'])) {
+            $producto = $_GET['titulo'];
+            $material = $_GET['material'];
+            $precio = $_GET['precio'];
+            $categoria = $_GET['categoria'];
+        }
         $this->modelproducts->insertproduct($producto, $material, $precio, $categoria);
         $this->viewproducts->insertado($producto);
     }
@@ -90,14 +88,15 @@ class controladorproductos
     }
     function admincat()
     {
-        session_start();
         $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showadmincat();
     }
     function addcat()
     {
         $this->helper->checklogged();
-        $nombre = $_POST['nombre'];
+        if (!empty($_POST['nombre'])) {
+            $nombre = $_POST['nombre'];
+        }
         $this->modelcategorias->insertcat($nombre);
         header("location: " . BASE_URL . "admincat");
     }

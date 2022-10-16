@@ -18,6 +18,15 @@ class usuarioscontroler
         $this->viewusuarios = new vistausuarios();
         $this->modelcategorias = new categoriamodelo();
         $this->categorias = $this->modelcategorias->getAllcategoria();
+        if (strnatcasecmp(phpversion(), '5.4.0') >= 0) {
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+        } else {
+            if (session_id() == '') {
+                session_start();
+            }
+        }
     }
 
     function showform()
@@ -27,11 +36,13 @@ class usuarioscontroler
     }
     function login()
     {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        if (!empty($_POST['email'] && $_POST['password'])) {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+        }
         $usuario = $this->modelusuarios->getusuario($email);
         if ((!empty($usuario)) && (password_verify($password, $usuario->contracenia))) {
-            session_start();
+            // session_start();
             $_SESSION['nombre'] = $usuario->nombre;
             $_SESSION['email'] = $usuario->email;
             $_SESSION['islogged'] = true;
@@ -43,7 +54,7 @@ class usuarioscontroler
     }
     function logaut()
     {
-        session_start();
+        // session_start();
         session_destroy();
         header("location: home");
     }
