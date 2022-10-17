@@ -1,29 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 02:24:11
+/* Smarty version 4.2.1, created on 2022-10-17 22:24:15
   from 'C:\xampp\htdocs\web2\repuestos\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634b4f2ba206f5_60535192',
+  'unifunc' => 'content_634db9efb0c3c8_81206667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd99de483b6e02a0f301b3b98f47a6a4b67c65de' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\productos.tpl',
-      1 => 1665879547,
+      1 => 1666038224,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:templates/header.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634b4f2ba206f5_60535192 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_634db9efb0c3c8_81206667 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1 class="categoria">Todos nuestros PRODUCTOS</h1>
 <?php

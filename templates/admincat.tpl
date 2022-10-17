@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <h1 class="categoria">Administrar Categorias</h1>
 
 <div class="productos tableadmincat">

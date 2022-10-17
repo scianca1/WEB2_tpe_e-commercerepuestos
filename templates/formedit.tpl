@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <div class="productos producto ">
   <div>
     <form action="{BASE_URL}editar/{$producto->ID}" method="POST">

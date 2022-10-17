@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <div class=" categoria insertado">
     <h1> Tu producto {$producto->producto} Fue ELIMINADO correctamente </h1>
 </div>

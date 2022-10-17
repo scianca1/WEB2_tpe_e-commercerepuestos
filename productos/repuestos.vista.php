@@ -17,6 +17,7 @@ class vistaproductos
   function showheader($categorias)
   {
     $this->smarty->assign('categorias', $categorias);
+    $this->smarty->display('templates/header.tpl');
   }
   function showproducto($producto)
   {

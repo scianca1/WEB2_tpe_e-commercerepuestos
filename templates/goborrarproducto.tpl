@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 
 <div class=" categoria insertado cuidado">
     <h1> Tu categoria {$categoria->categoria} contiene {$numerodeproductos} productos, estos se eliminaran cuando

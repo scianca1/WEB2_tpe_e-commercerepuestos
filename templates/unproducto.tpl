@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <div class="productos producto ">
     <div>
         {if isset($smarty.session.nombre)}

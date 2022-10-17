@@ -22,21 +22,22 @@ class controladorproductos
         $this->modelcategorias = new categoriamodelo();
         $this->categorias = $this->modelcategorias->getAllcategoria();
         $this->productos = $this->modelproducts->getAll();
+        $this->viewproducts->showheader($this->categorias);
     }
     function showhome()
     {
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showproducts($this->productos);
     }
     function showproducto($id)
     {
         $producto = $this->modelproducts->getproduct($id);
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showproducto($producto);
     }
     function showcategoria($id)
     {
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $cate = $this->modelproducts->getcategoria($id);
         $categoria = $this->modelcategorias->getcategoria($id);
         $this->viewproducts->showcategoria($cate, $categoria);
@@ -50,12 +51,12 @@ class controladorproductos
     }
     function iracargarpr()
     {
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showformcargar();
     }
     function cargarpr()
     {
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $this->helper->checklogged();
         if (!empty($_GET['titulo'] && $_GET['material'] &&  $_GET['precio'] && $_GET['categoria'])) {
             $producto = $_GET['titulo'];
@@ -69,7 +70,7 @@ class controladorproductos
     function iraeditarproducto($id)
     {
         $this->helper->checklogged();
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $producto = $this->modelproducts->getproduct($id);
         $categoriadelproducto = $this->modelcategorias->getcategoria($producto->id_categoria_fk);
         $this->viewproducts->showformedit($producto, $categoriadelproducto);
@@ -88,7 +89,7 @@ class controladorproductos
     }
     function admincat()
     {
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $this->viewproducts->showadmincat();
     }
     function addcat()
@@ -117,7 +118,7 @@ class controladorproductos
     function goeditarcat($id, $i)
     {
         $this->helper->checklogged();
-        $this->viewproducts->showheader($this->categorias);
+        // $this->viewproducts->showheader($this->categorias);
         $categoria = $this->modelcategorias->getcategoria($id);
         $this->viewproducts->showformeditcat($categoria, $i);
     }

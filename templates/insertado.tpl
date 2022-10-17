@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <div>
     <a href="{BASE_URL}home" class="btn btn-primary btn-comprar">volver al inicio</a>
 </div>

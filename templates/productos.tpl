@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <h1 class="categoria">Todos nuestros PRODUCTOS</h1>
 {foreach from=$productos item=$producto}
    <div class="card ">

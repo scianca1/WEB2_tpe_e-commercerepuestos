@@ -1,4 +1,4 @@
-{include file='templates/header.tpl'}
+
 <h1 class="categoria">Editar Categoria</h1>
 <form action="{BASE_URL}editarcat/{$categoria->id}" method="POST">
   <div class="productos tableadmincat">
