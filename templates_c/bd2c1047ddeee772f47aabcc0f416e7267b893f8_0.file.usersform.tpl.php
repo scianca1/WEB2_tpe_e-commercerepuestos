@@ -1,29 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 03:58:14
+/* Smarty version 4.2.1, created on 2022-10-17 23:14:41
   from 'C:\xampp\htdocs\web2\repuestos\templates\usersform.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634b6536bccf28_24209433',
+  'unifunc' => 'content_634dc5c13514b4_75155714',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd2c1047ddeee772f47aabcc0f416e7267b893f8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\usersform.tpl',
-      1 => 1665879542,
+      1 => 1666038250,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:templates/header.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634b6536bccf28_24209433 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_634dc5c13514b4_75155714 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="productos producto formuser ">

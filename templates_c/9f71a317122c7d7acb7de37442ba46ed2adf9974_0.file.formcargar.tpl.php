@@ -1,29 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 02:25:02
+/* Smarty version 4.2.1, created on 2022-10-17 23:15:14
   from 'C:\xampp\htdocs\web2\repuestos\templates\formcargar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634b4f5ea4a6f1_44956206',
+  'unifunc' => 'content_634dc5e2231584_13263004',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f71a317122c7d7acb7de37442ba46ed2adf9974' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\formcargar.tpl',
-      1 => 1665879560,
+      1 => 1666038170,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:templates/header.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634b4f5ea4a6f1_44956206 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_634dc5e2231584_13263004 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="productos producto ">
   <div>

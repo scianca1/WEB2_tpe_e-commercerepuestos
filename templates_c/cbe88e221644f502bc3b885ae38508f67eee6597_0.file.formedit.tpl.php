@@ -1,29 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 02:24:29
+/* Smarty version 4.2.1, created on 2022-10-17 23:15:02
   from 'C:\xampp\htdocs\web2\repuestos\templates\formedit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634b4f3dad3ca0_33534067',
+  'unifunc' => 'content_634dc5d688c193_79963652',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbe88e221644f502bc3b885ae38508f67eee6597' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\formedit.tpl',
-      1 => 1665877718,
+      1 => 1666038192,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:templates/header.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634b4f3dad3ca0_33534067 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_634dc5d688c193_79963652 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="productos producto ">
   <div>

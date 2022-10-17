@@ -27,12 +27,12 @@ class usuarioscontroler
                 session_start();
             }
         }
+        $this->viewusuarios->showheader($this->categorias);
     }
 
     function showform()
     {
-        $this->viewusuarios->showheader($this->categorias);
-        $this->viewusuarios->showform();
+         $this->viewusuarios->showform();
     }
     function login()
     {
@@ -54,7 +54,6 @@ class usuarioscontroler
     }
     function logaut()
     {
-        // session_start();
         session_destroy();
         header("location: home");
     }

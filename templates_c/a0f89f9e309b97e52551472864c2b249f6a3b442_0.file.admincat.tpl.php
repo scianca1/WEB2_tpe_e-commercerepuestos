@@ -1,29 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-16 03:34:03
+/* Smarty version 4.2.1, created on 2022-10-17 23:15:28
   from 'C:\xampp\htdocs\web2\repuestos\templates\admincat.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634b5f8b4e2f93_47634611',
+  'unifunc' => 'content_634dc5f0485850_99376753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0f89f9e309b97e52551472864c2b249f6a3b442' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\admincat.tpl',
-      1 => 1665879331,
+      1 => 1666038180,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:templates/header.tpl' => 1,
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634b5f8b4e2f93_47634611 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:templates/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_634dc5f0485850_99376753 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1 class="categoria">Administrar Categorias</h1>
 
