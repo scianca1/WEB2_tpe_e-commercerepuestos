@@ -1,9 +1,10 @@
-
 <div class="productos producto ">
   <div>
-    <form action="{BASE_URL}editar/{$producto->ID}" method="POST">
-      <div class="content-img-produc"><img src="{BASE_URL}imagenes/cremallera_prueba.jpg" class="card-img-top"
-          alt="cremayera"></div>
+    <form action="{BASE_URL}editar/{$producto->ID}" method="POST" enctype="multipart/form-data">
+
+      <div class=" formnew"><label class="dato">cambiar una imagen</label>
+        <input class="titulo" type="file" name="imagen">
+      </div>
       <div class=" formnew"><label class="dato">Titulo:</label><input value="{$producto->producto}" type="text"
           class="titulo" name="titulo" required></div>
       <div class=" formnew"><label class="dato">MATERIAL:</label><input value="{$producto->material}" type="text"

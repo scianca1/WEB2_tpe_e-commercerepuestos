@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 22:24:15
+/* Smarty version 4.2.1, created on 2022-10-18 02:42:21
   from 'C:\xampp\htdocs\web2\repuestos\templates\productos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634db9efb0c3c8_81206667',
+  'unifunc' => 'content_634df66d5e81d4_14728342',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd99de483b6e02a0f301b3b98f47a6a4b67c65de' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\productos.tpl',
-      1 => 1666038224,
+      1 => 1666053737,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634db9efb0c3c8_81206667 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634df66d5e81d4_14728342 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1 class="categoria">Todos nuestros PRODUCTOS</h1>
 <?php
@@ -31,8 +31,9 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['producto']->valu
 $_smarty_tpl->tpl_vars['producto']->do_else = false;
 ?>
    <div class="card ">
-      <div class="content-img-produc"><img src="<?php echo BASE_URL;?>
-imagenes/cremallera_prueba.jpg" class="card-img-top"
+      <div class="content-img-produc"><img src="<?php echo BASE_URL;
+echo $_smarty_tpl->tpl_vars['producto']->value->img;?>
+" class="card-img-top"
             alt="cremayera"></div>
       <div class="card-body">
 

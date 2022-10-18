@@ -48,20 +48,25 @@ class controladorproductos
     }
     function iracargarpr()
     {
-        
         $this->viewproducts->showformcargar();
     }
     function cargarpr()
     {
-        
+
         $this->helper->checklogged();
-        if (!empty($_GET['titulo'] && $_GET['material'] &&  $_GET['precio'] && $_GET['categoria'])) {
-            $producto = $_GET['titulo'];
-            $material = $_GET['material'];
-            $precio = $_GET['precio'];
-            $categoria = $_GET['categoria'];
+        if (!empty($_POST['titulo'] && $_POST['material'] &&  $_POST['precio'] && $_POST['categoria'])) {
+            $producto = $_POST['titulo'];
+            $material = $_POST['material'];
+            $precio = $_POST['precio'];
+            $categoria = $_POST['categoria'];
         }
-        $this->modelproducts->insertproduct($producto, $material, $precio, $categoria);
+        if (!empty($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" ||
+            $_FILES['imagen']['type'] == "image/png")) {
+            $img = $_FILES['imagen']['tmp_name'];
+            $this->modelproducts->insertproduct($producto, $material, $precio, $categoria, $img);
+        } else {
+            $this->modelproducts->insertproduct($producto, $material, $precio, $categoria);
+        }
         $this->viewproducts->insertado($producto);
     }
     function iraeditarproducto($id)
@@ -79,13 +84,19 @@ class controladorproductos
             $material = $_POST['material'];
             $precio = $_POST['precio'];
             $id_categoria = $_POST['categoria'];
-            $this->modelproducts->editproducto($titulo, $material, $precio, $id_categoria, $id);
-            header("location: " . BASE_URL . "home");
         }
+        if (!empty($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" ||
+            $_FILES['imagen']['type'] == "image/png")) {
+            $img = $_FILES['imagen']['tmp_name'];
+            $this->modelproducts->editproducto($titulo, $material, $precio, $id_categoria, $id, $img);
+        } else {
+            $this->modelproducts->editproducto($titulo, $material, $precio, $id_categoria, $id);
+        }
+        header("location: " . BASE_URL . "home");
     }
     function admincat()
     {
-         $this->viewproducts->showadmincat();
+        $this->viewproducts->showadmincat();
     }
     function addcat()
     {

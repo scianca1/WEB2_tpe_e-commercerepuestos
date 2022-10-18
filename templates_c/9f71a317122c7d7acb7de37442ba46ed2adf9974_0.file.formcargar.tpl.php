@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 23:15:14
+/* Smarty version 4.2.1, created on 2022-10-18 03:09:33
   from 'C:\xampp\htdocs\web2\repuestos\templates\formcargar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634dc5e2231584_13263004',
+  'unifunc' => 'content_634dfccdb22f52_39545931',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f71a317122c7d7acb7de37442ba46ed2adf9974' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\formcargar.tpl',
-      1 => 1666038170,
+      1 => 1666054803,
       2 => 'file',
     ),
   ),
@@ -21,15 +21,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634dc5e2231584_13263004 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<div class="productos producto ">
+function content_634dfccdb22f52_39545931 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="productos producto ">
   <div>
     <form action="<?php echo BASE_URL;?>
-cargarproducto" method="GET">
-      <div class="content-img-produc"><img src="<?php echo BASE_URL;?>
-imagenes/cremallera_prueba.jpg" class="card-img-top"
-          alt="cremayera"></div>
+cargarproducto" method="POST" enctype="multipart/form-data">
+      <div class=" formnew">
+        <label class="dato">Agrege una imagen</label>
+        <input class="titulo" type="file" name="imagen">
+      </div>
       <div class=" formnew"><label class="dato">Titulo:</label><input type="text" class="titulo" name="titulo" required>
       </div>
       <div class=" formnew"><label class="dato">MATERIAL:</label><input type="text" class="material" name="material"

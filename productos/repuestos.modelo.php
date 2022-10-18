@@ -33,13 +33,32 @@ class repuestosmodelo
         $sentencia = $this->db->prepare("DELETE FROM productos WHERE ID=?");
         $sentencia->execute([$id]);
     }
-    function insertproduct($producto, $material, $precio, $categoria)
+    function insertproduct($producto, $material, $precio, $categoria, $img = null)
     {
-        $sentencia = $this->db->prepare("INSERT INTO productos(producto,material,precio,id_categoria_fk) VALUES(?,?,?,?)");
-        $sentencia->execute([$producto, $material, $precio, $categoria]);
+        $pathimg = null;
+        if ($img) {
+            $pathimg = $this->uploadImage($img);
+            $sentencia = $this->db->prepare("INSERT INTO productos(producto,material,precio,id_categoria_fk,img) VALUES(?,?,?,?,?)");
+            $sentencia->execute([$producto, $material, $precio, $categoria, $pathimg]);
+        } else {
+            $sentencia = $this->db->prepare("INSERT INTO productos(producto,material,precio,id_categoria_fk) VALUES(?,?,?,?)");
+            $sentencia->execute([$producto, $material, $precio, $categoria]);
+        }
     }
-    function editproducto($titulo, $material, $precio, $id_categoria, $id)
+    private function uploadImage($img)
     {
+        $target = 'imagen_db' . uniqid() . '.jpg';
+        move_uploaded_file($img, $target);
+        return $target;
+    }
+    function editproducto($titulo, $material, $precio, $id_categoria, $id, $img = null)
+    {
+        $pathimg = null;
+        if ($img) {
+            $pathimg = $this->uploadImage($img);
+            $sentencia = $this->db->prepare("UPDATE productos SET material=?,precio=?,producto=?,id_categoria_fk=?,img=? WHERE ID=?");
+            $sentencia->execute([$material, $precio, $titulo, $id_categoria, $pathimg, $id]);
+        }
         $sentencia = $this->db->prepare("UPDATE productos SET material=?,precio=?,producto=?,id_categoria_fk=? WHERE ID=?");
         $sentencia->execute([$material, $precio, $titulo, $id_categoria, $id]);
     }

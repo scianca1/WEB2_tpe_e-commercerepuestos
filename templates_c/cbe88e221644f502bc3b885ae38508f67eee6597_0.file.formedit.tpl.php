@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 23:15:02
+/* Smarty version 4.2.1, created on 2022-10-18 03:07:07
   from 'C:\xampp\htdocs\web2\repuestos\templates\formedit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634dc5d688c193_79963652',
+  'unifunc' => 'content_634dfc3b26a926_17566919',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cbe88e221644f502bc3b885ae38508f67eee6597' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\repuestos\\templates\\formedit.tpl',
-      1 => 1666038192,
+      1 => 1666054815,
       2 => 'file',
     ),
   ),
@@ -21,16 +21,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_634dc5d688c193_79963652 (Smarty_Internal_Template $_smarty_tpl) {
-?>
-<div class="productos producto ">
+function content_634dfc3b26a926_17566919 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="productos producto ">
   <div>
     <form action="<?php echo BASE_URL;?>
 editar/<?php echo $_smarty_tpl->tpl_vars['producto']->value->ID;?>
-" method="POST">
-      <div class="content-img-produc"><img src="<?php echo BASE_URL;?>
-imagenes/cremallera_prueba.jpg" class="card-img-top"
-          alt="cremayera"></div>
+" method="POST" enctype="multipart/form-data">
+
+      <div class=" formnew"><label class="dato">cambiar una imagen</label>
+        <input class="titulo" type="file" name="imagen">
+      </div>
       <div class=" formnew"><label class="dato">Titulo:</label><input value="<?php echo $_smarty_tpl->tpl_vars['producto']->value->producto;?>
 " type="text"
           class="titulo" name="titulo" required></div>

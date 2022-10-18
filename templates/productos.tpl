@@ -2,7 +2,7 @@
 <h1 class="categoria">Todos nuestros PRODUCTOS</h1>
 {foreach from=$productos item=$producto}
    <div class="card ">
-      <div class="content-img-produc"><img src="{BASE_URL}imagenes/cremallera_prueba.jpg" class="card-img-top"
+      <div class="content-img-produc"><img src="{BASE_URL}{$producto->img}" class="card-img-top"
             alt="cremayera"></div>
       <div class="card-body">
 
