@@ -47,7 +47,7 @@ class repuestosmodelo
     }
     private function uploadImage($img)
     {
-        $target = 'imagen_db' . uniqid() . '.jpg';
+        $target = 'imagen_db/' . uniqid() . '.jpg';
         move_uploaded_file($img, $target);
         return $target;
     }
